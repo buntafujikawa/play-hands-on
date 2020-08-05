@@ -1,3 +1,8 @@
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 GET     /todo/hello_world           controllers.TodoController.helloWorld()
 GET     /todo                       controllers.TodoController.list()
+GET     /todo/new                   controllers.TodoController.todoNew()
+POST    /todo                       controllers.TodoController.todoAdd()
+GET     /todo/edit/:todoId          controllers.TodoController.todoEdit(todoId:Long)
+POST    /todo/:todoId               controllers.TodoController.todoUpdate(todoId:Long)
+POST    /todo/:todoId/delete        controllers.TodoController.todoDelete(todoId:Long)
